@@ -1,0 +1,104 @@
+@mixin colorFont($size, $wei) {
+ font-family: 'Open Sans', sans-serif;
+ color: #2C3A55;
+ font-style: normal;
+ font-size: $size;
+ font-weight: $wei;
+}
+
+.navbar{
+    
+    display: flex;
+    width : 80%;
+    margin: auto;
+    justify-content: space-between;
+    .logo{   
+        width: 222px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+            height: 37px;
+            width: 31px;
+        }
+        span{
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 25.861px;
+            line-height: 30px;
+            color: #1363D5;
+        }
+    }
+    .main-nav{
+        
+    
+            width: 618px;
+            list-style: none;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            .nav-links{
+                text-decoration: none;
+                @include colorFont(14px,normal);              
+                line-height: 19px;
+                letter-spacing: 0.322264px;
+            }         
+            .nav-btn{
+                background: linear-gradient(194.13deg, #4C55FF 4.2%, #1B7CFF 98.64%);
+                border-radius: 22.5px;
+                border: none;
+                width: 147px;
+                @include colorFont(13px,bold);
+                height: 37px;
+                color: #ffffff;                
+                letter-spacing: 0.299245px;
+                text-transform: uppercase;
+            }
+        }
+        .burger{
+            display: none;
+        }
+        
+    }
+
+@media screen and (max-width: 1024px) {
+    .navbar{
+        width : 90%;
+    }
+}
+@media screen and (max-width: 768px) {
+    
+    .navbar{
+        width: 90%;
+        // margin-left: auto;
+        margin-top: 8px;
+        justify-content: space-between;
+        align-items: center;
+        .main-nav{
+            position: absolute;            
+            height: 250px;
+            width: 90%;
+            margin: auto;
+            padding: 0px;
+            background: #ffffff;
+            top : 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            opacity: 0%;            
+            transition: transform 0.5s ease-in;            
+        }
+        
+        .burger{
+            display: block;
+            cursor: pointer;
+         
+    }
+    .main-nav-active{
+        opacity: 100%;
+    }
+    }
+}

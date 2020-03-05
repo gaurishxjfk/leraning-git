@@ -1,0 +1,285 @@
+@mixin colorFont($size, $wei) {
+    font-family: 'Open Sans', sans-serif;
+    color: #2C3A55;
+    font-style: normal;
+    font-size: $size;
+    font-weight: $wei;
+   }
+   .services{
+       width: 80%;
+       margin: auto;
+       margin-top: 300px;
+       display: flex;
+       .services-left{
+           img{
+               width: 45%;
+               height: auto;
+           }
+       .servc-down{
+           margin-top: 66px;
+           width: 50%;
+           p{
+               @include colorFont(12px,normal );
+               line-height: 16px;
+               letter-spacing: 1.88px;
+               text-transform: uppercase;
+           }
+           h2{
+            line-height: 46px;
+            @include colorFont(36px, bold)
+           }
+           button{
+            margin-top: 100px;
+            background: linear-gradient(195.64deg, #4C55FF 0%, #1B7CFF 100%);
+            border-radius: 28px;
+            border : none;
+            width: 200px;
+            height: 56px;
+            @include colorFont(16px,bold);
+            color: #ffffff;
+            cursor: pointer;
+            }
+       }
+    }
+       .rightx{
+           display: flex;
+           justify-content: space-between;
+           width: 65%;
+           .services-right{
+               text-align: center;
+               .serv-itm{
+                p:nth-child(2){  
+                @include colorFont(18px, bold) ;             
+                letter-spacing: 2.82px;
+                text-transform: uppercase;
+               }
+               p:nth-child(3){  
+                @include colorFont(14px, normal) ;             
+                line-height: 26px;
+                width: 240px;
+                
+               }
+
+            }
+            .path{
+                margin-top: 65px;
+                margin-bottom: 75px;
+            }
+            .path:nth-child(4){
+                display : none !important;
+            }
+           }
+           .services-right1{
+               margin-top: 50px;
+            text-align: center;
+            .serv-itm{
+                p:nth-child(2){  
+                @include colorFont(18px, bold) ;             
+                letter-spacing: 2.82px;
+                text-transform: uppercase;
+               }
+               p:nth-child(3){  
+                @include colorFont(14px, normal) ;             
+                line-height: 26px;
+                width: 240px;                
+               }
+            }
+            .path{
+                margin-top: 65px;
+                margin-bottom: 75px;
+            }
+            .path:nth-child(4){
+                display : none !important;
+            }
+        }
+
+    }
+   }
+
+   @media only screen and (max-width: 1024px) {
+    .services{
+        width: 90%;        
+        margin-top: 275px;
+        display: flex;
+        .services-left{
+            img{
+                width: 50%;
+                height: auto;
+            }
+        .servc-down{
+            margin-top: 56px;
+            width: 55%;
+            p{
+                @include colorFont(12px,normal );
+                line-height: 16px;
+                letter-spacing: 1.88px;
+                text-transform: uppercase;
+            }
+            h2{
+             line-height: 46px;
+             @include colorFont(32px, bold)
+            }
+            button{
+             margin-top: 80px;
+             background: linear-gradient(195.64deg, #4C55FF 0%, #1B7CFF 100%);
+             border-radius: 28px;
+             border : none;
+             width: 140px;
+             height: 46px;
+             @include colorFont(16px,bold);
+             color: #ffffff;
+             cursor: pointer;
+             }
+        }
+     }
+        .rightx{
+            width: 100% !important;
+            display: flex;
+            justify-content: space-between;           
+            .services-right{
+                text-align: center;
+                .serv-itm{
+                 p:nth-child(2){  
+                 @include colorFont(18px, bold);             
+                 letter-spacing: 2.82px;
+                 text-transform: uppercase;
+                }
+                p:nth-child(3){  
+                 @include colorFont(14px, normal);                              
+                 line-height: 26px;
+                 width: 150px;                 
+                } 
+             }
+             .path{
+                 margin-top: 45px;
+                 margin-bottom: 55px;
+             }
+             .path:nth-child(4){
+                 display : none !important;
+             }
+            }
+            .services-right1{
+                margin-top: 50px;
+             text-align: center;
+             .serv-itm{
+                 p:nth-child(2){  
+                 @include colorFont(18px, bold) ;             
+                 letter-spacing: 2.82px;
+                 text-transform: uppercase;
+                }
+                p:nth-child(3){  
+                 @include colorFont(14px, normal) ;             
+                 line-height: 26px;
+                 width: 150px;                 
+                }
+             }
+             .path{
+                 margin-top: 45px;
+                 margin-bottom: 55px;
+             }
+             .path:nth-child(4){
+                 display : none !important;
+             }
+         }
+ 
+     }
+    } 
+   }
+
+   @media only screen and (max-width: 768px) {
+    .services{
+        width: 90%;        
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        .services-left{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            img{
+                width: 50%;
+                height: auto;
+                margin-top: 50px;
+        }
+        .servc-down{
+            margin-top: 56px;
+            width: 55%;
+            text-align: center;
+            p{
+                @include colorFont(12px,normal );
+                line-height: 16px;
+                letter-spacing: 1.88px;
+                text-transform: uppercase;
+            }
+            h2{
+             line-height: 34px;
+             @include colorFont(24px, bold)
+            }
+            button{
+             margin-top: 31px;
+             background: linear-gradient(195.64deg, #4C55FF 0%, #1B7CFF 100%);
+             border-radius: 28px;
+             border : none;
+             width: 140px;
+             height: 46px;
+             @include colorFont(16px,bold);
+             color: #ffffff;
+             cursor: pointer;
+             }
+        }
+     }
+        .rightx{
+            width: 100% !important;
+            display: flex;
+            justify-content: space-between; 
+            flex-direction: column;    
+            align-items: center;    
+            margin-top: 70px;  
+            .services-right{
+                text-align: center;
+                .serv-itm{
+                 p:nth-child(2){  
+                 @include colorFont(18px, bold);             
+                 letter-spacing: 2.82px;
+                 text-transform: uppercase;
+                }
+                p:nth-child(3){  
+                 @include colorFont(14px, normal);                              
+                 line-height: 26px;
+                 width: 240px;                 
+                } 
+             }
+             .path{
+                 margin-top: 45px;
+                 margin-bottom: 55px;
+             }
+             .path:nth-child(4){
+                 display : inline-block !important;
+             }
+            }
+            .services-right1{
+                margin-top: 0px;
+             text-align: center;
+             .serv-itm{
+                 p:nth-child(2){  
+                 @include colorFont(18px, bold) ;             
+                 letter-spacing: 2.82px;
+                 text-transform: uppercase;
+                }
+                p:nth-child(3){  
+                 @include colorFont(14px, normal) ;             
+                 line-height: 26px;
+                 width: 240px;                 
+                }
+             }
+             .path{
+                 margin-top: 45px;
+                 margin-bottom: 55px;
+             }
+             .path:nth-child(4){
+                display : inline-block !important;
+            }
+         } 
+     }
+    } 
+   }

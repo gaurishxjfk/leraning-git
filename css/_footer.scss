@@ -1,0 +1,107 @@
+@mixin colorFont($size, $wei) {
+    font-family: 'Open Sans', sans-serif;
+    color: #2C3A55;
+    font-style: normal;
+    font-size: $size;
+    font-weight: $wei;
+   }
+
+   .footer{       
+       width: 80%;
+       margin-top: 100px;
+       margin-left: auto;     
+       margin-right: auto;  
+       margin-bottom: 50px; 
+       display: flex;
+        .left-foot{
+            flex: 9;
+            .btn{
+                margin-top: 155px;
+                button{
+                    width: 121px;
+                    height: 47px;
+                    background-color: white;
+                    border: 1px solid #CCCEEE;
+                    box-sizing: border-box;
+                    border-radius: 30px;
+                    @include colorFont(12px, normal);
+                    line-height: 40px;
+                    text-align: center;
+                    letter-spacing: 1.88px;
+                    text-transform: uppercase;
+                    color: #4C55FF;
+                }
+            }
+        }
+        .mid-foot{
+            flex: 2;
+            p:nth-child(1){
+                @include colorFont(16px,bold);
+            }
+
+            p:nth-child(2){
+                @include colorFont(12px,normal);
+                line-height: 40px;
+            }
+        }
+        .right-foot{
+            flex: 2;
+            p:nth-child(1){
+                @include colorFont(16px,bold);
+            }
+
+            p:nth-child(2){
+                @include colorFont(12px,normal);
+                line-height: 40px;
+            }
+        }
+   }
+   .fin{
+       width: 100%;
+       text-align: center;
+       @include colorFont(14px, normal);
+       img{
+           margin-bottom : 20px;
+       }
+   }
+
+   @media only screen and (max-width: 768px) {
+    .footer{
+        .left-foot{
+
+            flex: 1;
+            .btn{
+                margin-top: 15px;
+                button{
+                    width: 121px;
+                    height: 47px;
+                    background-color: white;
+                    border: 1px solid #CCCEEE;
+                    box-sizing: border-box;
+                    border-radius: 30px;
+                    @include colorFont(12px, normal);
+                    line-height: 40px;
+                    text-align: center;
+                    letter-spacing: 1.88px;
+                    text-transform: uppercase;
+                    color: #4C55FF;
+                }
+            }
+        }
+        width: 80%;
+        margin-top: 100px;
+        margin-left: auto;     
+        margin-right: auto;  
+        margin-bottom: 50px; 
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+   }
+   .mid-foot{
+       text-align: center;
+   }
+   .right-foot{
+    text-align: center;
+}
+
+   }
